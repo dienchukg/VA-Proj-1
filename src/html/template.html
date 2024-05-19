@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOPGAME</title>
+    <style>
+      .tooltip {
+          position: absolute;
+          text-align: center;
+          padding: 5px;
+          font: 12px sans-serif;
+          background: lightsteelblue;
+          border: 0px;
+          border-radius: 8px;
+          pointer-events: none;
+      }
+  </style>
+  </head>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div class="root" id="root">
+      <div class="banner">
+        <h2 class = "title">Top 100 Board games analytics</h2>
+        
+      </div>
+      <div class="sidepanel">
+        
+        <label for="top_rank">Top___ranking</label>
+        <input
+          type="text"
+          id="top_rank"
+          value="100"
+          name="top_rank"
+          placeholder="Enter a number"
+        />
+        <label for="category">Select a category</label>
+<select id="category" name="category">
+  <option value="all">All</option>
+  <option value="Abstract Strategy">Abstract Strategy</option>
+  <option value="Action / Dexterity">Action / Dexterity</option>
+  <option value="Adventure">Adventure</option>
+  <option value="American West">American West</option>
+  <option value="Ancient">Ancient</option>
+  <option value="Animals">Animals</option>
+  <option value="Arabian">Arabian</option>
+  <option value="Bluffing">Bluffing</option>
+  <option value="Card Game">Card Game</option>
+  <option value="City Building">City Building</option>
+  <option value="Civil War">Civil War</option>
+  <option value="Civilization">Civilization</option>
+  <option value="Collectible Components">Collectible Components</option>
+  <option value="Comic Book / Strip">Comic Book / Strip</option>
+  <option value="Deduction">Deduction</option>
+  <option value="Dice">Dice</option>
+  <option value="Educational">Educational</option>
+  <option value="Economic">Economic</option>
+  <option value="Environmental">Environmental</option>
+  <option value="Exploration">Exploration</option>
+  <option value="Farming">Farming</option>
+  <option value="Fantasy">Fantasy</option>
+  <option value="Fighting">Fighting</option>
+  <option value="Horror">Horror</option>
+  <option value="Industry / Manufacturing">Industry / Manufacturing</option>
+  <option value="Medical">Medical</option>
+  <option value="Medieval">Medieval</option>
+  <option value="Miniatures">Miniatures</option>
+  <option value="Modern Warfare">Modern Warfare</option>
+  <option value="Movies / TV / Radio theme">Movies / TV / Radio theme</option>
+  <option value="Murder/Mystery">Murder/Mystery</option>
+  <option value="Mythology">Mythology</option>
+  <option value="Nautical">Nautical</option>
+  <option value="Negotiation">Negotiation</option>
+  <option value="Novel-based">Novel-based</option>
+  <option value="Pirates">Pirates</option>
+  <option value="Political">Political</option>
+  <option value="Post-Napoleonic">Post-Napoleonic</option>
+  <option value="Prehistoric">Prehistoric</option>
+  <option value="Puzzle">Puzzle</option>
+  <option value="Religious">Religious</option>
+  <option value="Renaissance">Renaissance</option>
+  <option value="Science Fiction">Science Fiction</option>
+  <option value="Space Exploration">Space Exploration</option>
+  <option value="Spies/Secret Agents">Spies/Secret Agents</option>
+  <option value="Territory Building">Territory Building</option>
+  <option value="Travel">Travel</option>
+  <option value="Video Game Theme">Video Game Theme</option>
+  <option value="Wargame">Wargame</option>
+</select>
+<label for="mechanic">Select a mechanic</label>
+<select id="mechanic" name="mechanic">
+  <option value="all">All</option>
+  <option value="Action Drafting">Action Drafting</option>
+  <option value="Action Points">Action Points</option>
+  <option value="Action Queue">Action Queue</option>
+  <option value="Action Retrieval">Action Retrieval</option>
+  <option value="Action/Event">Action/Event</option>
+  <option value="Advantage Token">Advantage Token</option>
+  <option value="Alliances">Alliances</option>
+  <option value="Area Majority / Influence">Area Majority / Influence</option>
+  <option value="Area Movement">Area Movement</option>
+  <option value="Area-Impulse">Area-Impulse</option>
+  <option value="Auction/Bidding">Auction/Bidding</option>
+  <option value="Auction: Dutch">Auction: Dutch</option>
+  <option value="Auction: Pass">Auction: Pass</option>
+  <option value="Automatic Resource Growth">Automatic Resource Growth</option>
+  <option value="Campaign / Battle Card Driven">Campaign / Battle Card Driven</option>
+  <option value="Card Play Conflict Resolution">Card Play Conflict Resolution</option>
+  <option value="Closed Drafting">Closed Drafting</option>
+  <option value="Communication Limits">Communication Limits</option>
+  <option value="Contracts">Contracts</option>
+  <option value="Cooperative Game">Cooperative Game</option>
+  <option value="Critical Hits and Failures">Critical Hits and Failures</option>
+  <option value="Deck Construction">Deck Construction</option>
+  <option value="Deck, Bag, and Pool Building">Deck, Bag, and Pool Building</option>
+  <option value="Delayed Purchase">Delayed Purchase</option>
+  <option value="Die Icon Resolution">Die Icon Resolution</option>
+  <option value="Dice Rolling">Dice Rolling</option>
+  <option value="Enclosure">Enclosure</option>
+  <option value="End Game Bonuses">End Game Bonuses</option>
+  <option value="Events">Events</option>
+  <option value="Follow">Follow</option>
+  <option value="Force Commitment">Force Commitment</option>
+  <option value="Grid Coverage">Grid Coverage</option>
+  <option value="Grid Movement">Grid Movement</option>
+  <option value="Hand Management">Hand Management</option>
+  <option value="Hidden Movement">Hidden Movement</option>
+  <option value="Hidden Roles">Hidden Roles</option>
+  <option value="Hidden Victory Points">Hidden Victory Points</option>
+  <option value="Increase Value of Unchosen Resources">Increase Value of Unchosen Resources</option>
+  <option value="Income">Income</option>
+  <option value="Kill Steal">Kill Steal</option>
+  <option value="King of the Hill">King of the Hill</option>
+  <option value="Layering">Layering</option>
+  <option value="Legacy Game">Legacy Game</option>
+  <option value="Line of Sight">Line of Sight</option>
+  <option value="Loans">Loans</option>
+  <option value="Map Addition">Map Addition</option>
+  <option value="Map Deformation">Map Deformation</option>
+  <option value="Market">Market</option>
+  <option value="Modular Board">Modular Board</option>
+  <option value="Movement Points">Movement Points</option>
+  <option value="Narrative Choice / Paragraph">Narrative Choice / Paragraph</option>
+  <option value="Network and Route Building">Network and Route Building</option>
+  <option value="Negotiation">Negotiation</option>
+  <option value="Once-Per-Game Abilities">Once-Per-Game Abilities</option>
+  <option value="Open Drafting">Open Drafting</option>
+  <option value="Ownership">Ownership</option>
+  <option value="Passed Action Token">Passed Action Token</option>
+  <option value="Pattern Building">Pattern Building</option>
+  <option value="Pick-up and Deliver">Pick-up and Deliver</option>
+  <option value="Player Elimination">Player Elimination</option>
+  <option value="Point to Point Movement">Point to Point Movement</option>
+  <option value="Post-Napoleonic">Post-Napoleonic</option>
+  <option value="Progressive Turn Order">Progressive Turn Order</option>
+  <option value="Push Your Luck">Push Your Luck</option>
+  <option value="Race">Race</option>
+  <option value="Resource to Move">Resource to Move</option>
+  <option value="Role Playing">Role Playing</option>
+  <option value="Scenario / Mission / Campaign Game">Scenario / Mission / Campaign Game</option>
+  <option value="Score-and-Reset Game">Score-and-Reset Game</option>
+  <option value="Semi-Cooperative Game">Semi-Cooperative Game</option>
+  <option value="Set Collection">Set Collection</option>
+  <option value="Simulation">Simulation</option>
+  <option value="Simultaneous Action Selection">Simultaneous Action Selection</option>
+  <option value="Solo / Solitaire Game">Solo / Solitaire Game</option>
+  <option value="Sudden Death Ending">Sudden Death Ending</option>
+  <option value="Stat Check Resolution">Stat Check Resolution</option>
+  <option value="Storytelling">Storytelling</option>
+  <option value="Tags">Tags</option>
+  <option value="Take That">Take That</option>
+  <option value="Team-Based Game">Team-Based Game</option>
+  <option value="Tech Trees / Tech Tracks">Tech Trees / Tech Tracks</option>
+  <option value="Tile Placement">Tile Placement</option>
+  <option value="Track Movement">Track Movement</option>
+  <option value="Trading">Trading</option>
+  <option value="Trick-taking">Trick-taking</option>
+  <option value="Traitor Game">Traitor Game</option>
+  <option value="Turn Order: Auction">Turn Order: Auction</option>
+  <option value="Turn Order: Claim Action">Turn Order: Claim Action</option>
+  <option value="Turn Order: Pass Order">Turn Order: Pass Order</option>
+  <option value="Turn Order: Progressive">Turn Order: Progressive</option>
+  <option value="Turn Order: Role Order">Turn Order: Role Order</option>
+  <option value="Turn Order: Stat-Based">Turn Order: Stat-Based</option>
+  <option value="Variable Phase Order">Variable Phase Order</option>
+  <option value="Variable Player Powers">Variable Player Powers</option>
+  <option value="Variable Set-up">Variable Set-up</option>
+  <option value="Victory Points as a Resource">Victory Points as a Resource</option>
+  <option value="Voting">Voting</option>
+  <option value="Worker Placement">Worker Placement</option>
+  <option value="Worker Placement with Dice Workers">Worker Placement with Dice Workers</option>
+  <option value="Worker Placement, Different Worker Types">Worker Placement, Different Worker Types</option>
+  <option value="Zone of Control">Zone of Control</option>
+</select>
+
+        <button id="load_data_button" class="button">Parallel Coordinates Plot</button>
+        <button id="load_data_button2" class="button">Projection (LDA) </button>
+        <label for="classes">Select class</label>
+<select id="classes" name="classes">
+  <option value="categoriesClass">Categories</option>
+  <option value="mechanicsClass">Mechanics</option>
+</select>      
+      </div>
+      <div class="visualizations">
+        <div class="pcp"> 
+        </div>
+        <div class = "scatterplot_LDA"></div>
+        <input type="checkbox" id="brushToggle"> Enable Brushing
+      </div>
+    </div>
+  </body>
+</html>

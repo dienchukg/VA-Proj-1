@@ -1,0 +1,71 @@
+html,
+body,
+head,
+#root,
+#app,
+.svg_root {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+#root {
+
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 70px auto;
+
+  grid-template-areas: "banner banner" "sidepanel visualizations";
+  margin:auto;
+
+}
+
+.banner {
+  grid-area: banner;
+  background-color:#3d5a80ff;
+  border: #ccc 1px solid;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidepanel {
+  grid-area: sidepanel;
+  border: #ccc 1px solid;
+  padding: 20px;
+}
+.visualizations {
+  grid-area: visualizations;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.button {
+    /* 300px: width if the sidepanel defined in the grid-template for #root */
+    /* 40px = 2 times 20px padding in .sidepanel */
+    width: calc(300px - 40px);
+    border-radius: 20px;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background: rgb(180, 180, 180);
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
