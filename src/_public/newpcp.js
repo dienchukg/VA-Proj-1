@@ -1,5 +1,4 @@
-import * as d3 from "d3";
-
+import * as d3 from "d3"
 function drawPcp(data) {
     const margin = {
         top: 50,
